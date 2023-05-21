@@ -19,8 +19,13 @@ const ApexChart = ({ data }) => {
         ],
         options: {
             chart: {
-                height: 450,
-                type: 'rangeBar'
+                height: 0,
+                type: 'rangeBar',
+                toolbar: {
+                    tools: {
+                        zoom: false
+                    }
+                }
             },
             plotOptions: {
                 bar: {
@@ -46,7 +51,7 @@ const ApexChart = ({ data }) => {
     };
     return (
         <div id="chart" className='border p-4 shadow-sm'>
-            <ReactApexChart options={state.options} series={state.series} type="rangeBar" height={250} />
+            <ReactApexChart options={state.options} series={state.series} type="rangeBar" height={300} />
         </div>
     )
 }

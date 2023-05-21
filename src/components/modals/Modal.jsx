@@ -32,6 +32,9 @@ const Modal = ({ data, isModalOpen, setIsModalOpen }) => {
                                 ) : null}
                             </div>
                         </section>
+                        <div className='text-right'>
+                            <button onClick={() => setIsModalOpen(false)} className='button-red w-max text-sm'>Close</button>
+                        </div>
                     </Dialog.Panel>
                 </Dialog>
             </Transition >
