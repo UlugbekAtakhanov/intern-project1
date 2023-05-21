@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer components {
+    .button-blue {
+        @apply bg-cblue text-white p-2 rounded-md shadow hover:shadow-lg hover:shadow-green-400 transition-all disabled:bg-green-500/50 disabled:shadow-none
+    }
+    .button-red {
+        @apply bg-red-700 text-white p-2 rounded-md shadow hover:shadow-lg hover:shadow-red-400 transition-all disabled:bg-red-500/50 disabled:shadow-none
+    }
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: lightgray;
+}
+::-webkit-scrollbar-thumbhover {
+    background: indigo;
+}
+
+body {
+    padding-bottom: 500px;
+}
+
+
+
+
+

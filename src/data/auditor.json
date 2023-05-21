@@ -1,0 +1,70 @@
+[
+    {
+        "full_name": "Auditor #1",
+        "ye": "31Dec",
+        "scope": "A+R",
+        "utilization": [
+            {
+                "client_name": "Client #1",
+                "percentage": "20",
+                "phase": [
+                    {
+                        "from": "January 5, 2023",
+                        "to": "January 10, 2023"
+                    },
+                    {
+                        "from": "January 15, 2023",
+                        "to": "January 30, 2023"
+                    }
+                ]
+            },
+            {
+                "client_name": "Client #2",
+                "percentage": "30",
+                "phase": [
+                    {
+                        "from": "January 15, 2023",
+                        "to": "January 28, 2023"
+                    },
+                    {
+                        "from": "February 5, 2023",
+                        "to": "February 8, 2023"
+                    }
+                ]
+            },
+            {
+                "client_name": "Client #3",
+                "percentage": "40",
+                "phase": [
+                    {
+                        "from": "January 4, 2023",
+                        "to": "January 10, 2023"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "full_name": "Auditor #2",
+        "ye": "31Dec",
+        "scope": "A",
+        "utilization": []
+    },
+    {
+        "full_name": "Auditor #3",
+        "ye": "31Dec",
+        "scope": "A",
+        "utilization": [
+            {
+                "client_name": "Client #4",
+                "percentage": "20",
+                "phase": [
+                    {
+                        "from": "January 2, 2023",
+                        "to": "January 30, 2023"
+                    }
+                ]
+            }
+        ]
+    }
+]
