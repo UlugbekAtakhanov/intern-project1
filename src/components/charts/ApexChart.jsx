@@ -25,6 +25,11 @@ const ApexChart = ({ data }) => {
                     tools: {
                         zoom: false
                     }
+                },
+                events: {
+                    mounted: function (chartContext, config) {
+                        console.log(config)
+                    }
                 }
             },
             plotOptions: {
@@ -47,6 +52,7 @@ const ApexChart = ({ data }) => {
                 position: 'top',
                 horizontalAlign: 'left'
             }
+
         },
     };
     return (
