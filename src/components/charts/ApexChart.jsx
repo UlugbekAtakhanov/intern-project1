@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import ReactApexChart from 'react-apexcharts';
 
 const ApexChart = ({ data }) => {
+
+    // there is a bug in apex, this useState is for re-rendering the component.
+    const [_, setCondition] = useState(false)
+
     const state = {
         series: [
             {
@@ -19,7 +23,6 @@ const ApexChart = ({ data }) => {
         ],
         options: {
             chart: {
-                height: 0,
                 type: 'rangeBar',
                 toolbar: {
                     tools: {
@@ -28,7 +31,7 @@ const ApexChart = ({ data }) => {
                 },
                 events: {
                     mounted: function (chartContext, config) {
-                        console.log(config)
+                        setCondition(true)
                     }
                 }
             },
