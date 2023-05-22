@@ -13,6 +13,7 @@ const AuditorsTable = () => {
     const [chartData, setChartData] = useState([])
     const [isModalOpen, setIsModalOpen] = useState(false)
 
+
     // table features
     const columns = useMemo(() => COLUMNS, [])
     const data = useMemo(() => auditorList || [], [auditorList])

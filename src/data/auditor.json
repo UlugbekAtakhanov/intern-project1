@@ -64,6 +64,20 @@
                         "to": "January 30, 2023"
                     }
                 ]
+            },
+            {
+                "client_name": "Client #5",
+                "percentage": "20",
+                "phase": [
+                    {
+                        "from": "January 2, 2023",
+                        "to": "January 7, 2023"
+                    },
+                    {
+                        "from": "January 12, 2023",
+                        "to": "January 17, 2023"
+                    }
+                ]
             }
         ]
     }

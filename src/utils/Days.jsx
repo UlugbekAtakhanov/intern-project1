@@ -1,29 +1,19 @@
-export const days = () => {
-    // Get the current date
-    const currentDate = new Date();
+import { format, parse } from "date-fns";
 
-    // Get the current month and year
-    const currentMonth = currentDate.getMonth();
-    const currentYear = currentDate.getFullYear();
+export const days = (start, end) => {
+    let arr = [];
+    let current = new Date(start);
+    let last = new Date(end);
 
-    // Create a new Date object for the first day of the month
-    const firstDayOfMonth = new Date(currentYear, currentMonth, 1);
-
-    // Array to store the formatted dates
-    const daysArray = [];
-
-    // Iterate over the days of the month
-    while (firstDayOfMonth.getMonth() === currentMonth) {
-        // Format the date as "Month Day"
-        const formattedDate = firstDayOfMonth.toLocaleString('default', { month: 'short', day: 'numeric' });
-
-        // Push the formatted date to the array
-        daysArray.push(formattedDate);
-
-        // Move to the next day
-        firstDayOfMonth.setDate(firstDayOfMonth.getDate() + 1);
+    while (current <= last) {
+        arr.push(current.toDateString());
+        current.setDate(current.getDate() + 1);
     }
 
-    // Print the array of days
-    return daysArray
+    const newArr = arr.map(item => {
+        const parsedDate = parse(item, 'EEE MMM dd yyyy', new Date());
+        const formattedDate = format(parsedDate, 'dd-MMM');
+        return formattedDate
+    })
+    return newArr;
 }
