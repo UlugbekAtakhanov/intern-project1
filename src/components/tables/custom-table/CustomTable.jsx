@@ -72,10 +72,10 @@ const CustomTable = () => {
 								{auditor.utilization.length ? auditor.utilization.map((util, index) => {
 									const newArr = util.phase.map(item => days(item.from, item.to)).flat()
 									return (
-										<div key={index} className='grid grid-flow-col justify-start'>
+										<div key={index} className='grid grid-flow-col justify-start group cursor-pointer'>
 											{cells.map((item, index) => {
 												return (
-													<div className={`${newArr.includes(item) ? "bg-yellow-700" : null} border w-[65px] h-[22px]`} key={index}></div>
+													<div className={`${newArr.includes(item) ? "bg-sky-700 group-hover:bg-red-500" : null} border w-[65px] h-[22px]`} key={index}></div>
 												)
 											})}
 										</div>
@@ -98,3 +98,10 @@ const CustomTable = () => {
 
 export default CustomTable
 
+
+function generateRandomColor() {
+	const color = '#' + Math.floor(Math.random() * 16777215).toString(16);
+	return color;
+}
+const randomColor = generateRandomColor();
+console.log(randomColor);
